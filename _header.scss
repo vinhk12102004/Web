@@ -1,0 +1,496 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+    background-color: transparent;
+    // background-color: black;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #ffffff33;
+    .header-main {
+        transition: background .3s, border .3s, border-radius .3s, box-shadow .3s;
+        padding: 0 15px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            position: relative;
+            &-icon {
+                color: var(--primary);
+                border-color: var(--primary);
+                fill: var(--primary);
+                font-size: 189px;
+                svg {
+                    position: relative;
+                    display: block;
+                    height: auto;
+                    width: 1em;
+                    fill: var(--primary);
+                }
+                @media(max-width:767px) {
+                    font-size: 140px;
+                }
+            }
+        }
+        .main-navigation {
+            position: relative;
+            ul.menu {
+                list-style: none;
+                margin-bottom: 0;
+                margin-left: 0;
+                li {
+                    position: relative;
+                    display: inline-block;
+                    text-align: left;
+                    a {
+                        display: block;
+                        font-size: 12px;
+                        line-height: 1.3333333333;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        padding: 40px 19px;
+                        color: #fff;
+                        span {
+                            position: relative;
+                            &::after {
+                                @media(min-width: 768px) {
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    width: 5px;
+                                    height: 5px;
+                                    border-radius: 50%;
+                                    margin: 0;
+                                    bottom: -13px;
+                                    left: 50%;
+                                    opacity: 0;
+                                    transform: translateX(-50%);
+                                    transition: all .3s ease;
+                                    background-color: var(--primary);
+                                }
+                            }
+                        }
+                    }
+                    ul.submenu {
+                        display: block;
+                        padding: 20px 0;
+                        border-radius: 3px;
+                        border: 1px solid var(--border);
+                        background-color: #fff;
+                        margin-left: 1.41575em;
+                        li.menu-item {
+                            a {
+                                width: 100%;
+                                color: var(--text_lighter);
+                                span {
+                                    &::before {
+                                        @media(min-width: 768px) {
+                                            content: '';
+                                            display: inline-block;
+                                            width: 5px;
+                                            height: 5px;
+                                            border-radius: 50%;
+                                            margin-right: 9px;
+                                            margin-bottom: 2px;
+                                            background-color: var(--border);
+                                        }
+                                    }
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                                &:hover {
+                                    color: var(--accent);
+                                    span {
+                                        &::before {
+                                            @media(min-width: 768px) {
+                                                background-color: var(--primary);
+                                            }
+                                        }
+                                    }
+                                }
+                                @media(min-width: 768px) {
+                                    padding: 12px 0;
+                                    font-weight: 400;
+                                    font-size: 12px;
+                                    line-height: 1.25;
+                                    text-transform: uppercase;
+                                    border-bottom: 1px solid var(--border);
+                                }
+                                @media(min-width:1024px) {
+                                    display: block;
+                                }
+                            }
+                            @media(min-width:768px) {
+                                padding: 0 30px;
+                            }
+                        }
+                        li {
+                            @media(min-width: 1024px) {
+                                display: block;
+                                min-width: 258px;
+                            }
+                            @media(min-width: 768px) {
+                                min-width: 238px;
+                            }
+                        }
+                        &.mega-menu {
+                            padding: 0;
+                            background: #fff;
+                            box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
+                            width: 800px;
+                            .mega-menu__item {
+                                .mega-form {
+                                    &__main {
+                                        position: relative;
+                                        padding: 16px 30px;
+                                        &-inner {
+                                            position: relative;
+                                            width: 100%;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            align-content: flex-start;
+                                            .mega-btn__viewall {
+                                                position: relative;
+                                                width: 100%;
+                                                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                                                border-bottom: 1px solid var(--border);
+                                                a {
+                                                    font-weight: 600;
+                                                    font-size: 14px;
+                                                    line-height: 1.7142857143;
+                                                    padding: 0;
+                                                    border-radius: 0;
+                                                    letter-spacing: 0;
+                                                    border: none;
+                                                    text-transform: capitalize;
+                                                    color: var(--accent);
+                                                    background-color: transparent;
+                                                    margin-bottom: 15px;
+                                                    span {
+                                                        &::after {
+                                                            @media(min-width: 768px) {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                        &:last-child {
+                                                            color: var(--primary);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .mega-tag {
+                                                position: relative;
+                                                width: 100%;
+                                                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                                                display: flex;
+                                                &__wrapper {
+                                                    display: block;
+                                                    width: 18%;
+                                                    overflow: inherit;
+                                                    position: relative;
+                                                    &::before {
+                                                        right: 0;
+                                                        position: absolute;
+                                                        content: "";
+                                                        height: 100%;
+                                                        background-color: var(--border);
+                                                        top: 0;
+                                                        width: 1px;
+                                                    }
+                                                    .mega-tag__title {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: space-between;
+                                                        font-weight: 500;
+                                                        font-size: 14px;
+                                                        line-height: .75;
+                                                        border-bottom: 1px solid var(--border);
+                                                        padding: 18px;
+                                                        margin: 0;
+                                                        color: var(--accent);
+                                                        position: relative;
+                                                        &::before {
+                                                            position: absolute;
+                                                            background: #cfd3da;
+                                                            width: 5px;
+                                                            height: 5px;
+                                                            content: "";
+                                                            left: 0;
+                                                            top: 22px;
+                                                            border-radius: 100%;
+                                                            transition: all .3s ease;
+                                                        }
+                                                        &.active {
+                                                            color: var(--primary);
+                                                            &::before {
+                                                                transition: all .3s ease;
+                                                                background-color: var(--primary);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &__content {
+                                                    border: none;
+                                                    padding-top: 5px;
+                                                    .mega-content__item {
+                                                        padding: 20px;
+                                                        display: none;
+                                                        color: var( --e-global-color-text);
+                                                        border: none;
+                                                        padding-top: 5px;
+                                                        &-inner {
+                                                            position: relative;
+                                                            .icon-list {
+                                                                max-width: 540px;
+                                                                display: flex;
+                                                                flex-wrap: wrap;
+                                                                margin: auto;
+                                                                &__item {
+                                                                    position: relative;
+                                                                    display: flex;
+                                                                    padding: .5407911001em 0;
+                                                                    font-weight: 400;
+                                                                    a {
+                                                                        display: block;
+                                                                        color: var(--text);
+                                                                        font-size: 14px;
+                                                                        width: 100%;
+                                                                        padding: 0;
+                                                                        text-transform: none;
+                                                                        span {
+                                                                            font-size: 14px;
+                                                                            color: #5c626a;
+                                                                            display: inline-block;
+                                                                            &::after {
+                                                                                display: none;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    @media(min-width: 768px) {
+                                                                        width: 33.333%;
+                                                                        min-width: auto !important;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    @media(min-width: 768px) {
+                                                        flex-grow: 1;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        @media(min-width:1024px) {
+                            float: left;
+                            position: absolute;
+                            top: 100%;
+                            transform: translateY(20px);
+                            z-index: 99999;
+                            left: 1.1em;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .3s ease;
+                            pointer-events: none;
+                        }
+                        @media(min-width: 768px) {
+                            margin-left: 0;
+                        }
+                    }
+                    &.current {
+                        a {
+                            span {
+                                &::after {
+                                    @media(min-width: 768px) {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        a {
+                            span {
+                                &::after {
+                                    @media(min-width: 768px) {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        .submenu {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(-1px);
+                            pointer-events: visible;
+                        }
+                    }
+                }
+                @media(min-width:1024px) {
+                    list-style: none;
+                    padding-left: 0;
+                    margin: 0;
+                    display: block;
+                }
+                @media(min-width: 768px) {
+                    max-height: none;
+                    overflow: visible;
+                    margin-left: -1.1em;
+                    margin-right: -1.1em;
+                    transition: none;
+                }
+            }
+            @media(max-width:1024px) {
+                display: none;
+            }
+        }
+        .header-populated {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            .phone {
+                position: relative;
+                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                a {
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 2px;
+                    i {
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+                    span {
+                        @media(max-width: 1120px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .search-icon {
+                position: relative;
+                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                margin: 0 0 0 23px;
+                a {
+                    font-size: 20px;
+                    line-height: 1;
+                    color: #fff;
+                }
+                @media(max-width:1120px) {
+                    margin: 0 0 0 14px;
+                }
+            }
+            .login {
+                position: relative;
+                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                margin: 0 0 0 14px;
+                a {
+                    font-size: 20px;
+                    line-height: 1;
+                    color: #fff;
+                }
+            }
+            .menu-toggle {
+                position: relative;
+                transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, -webkit-box-shadow .3s;
+                margin: 0 0 0 14px;
+                a {
+                    font-size: 20px;
+                    line-height: 1;
+                    color: #fff;
+                    i {
+                        font-weight: 900;
+                    }
+                }
+                @media(min-width:1024px) {
+                    display: none;
+                }
+            }
+        }
+        @media(max-width:1024px) {
+            padding: 0 15px;
+        }
+        @media(max-width:768px) {
+            padding: 0;
+        }
+    }
+    &.header-relative {
+        position: relative;
+        background-image: url('../../images/breadcrumb-1.jpg');
+        background-position: top center;
+        background-size: cover;
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .5;
+            transition: background .3s, border-radius .3s, opacity .3s;
+        }
+        .header-main {
+            .main-navigation {
+                ul {
+                    li {
+                        a {
+                            padding: 55px 19px;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            background-image: none;
+            .bg-overlay {
+                background-color: #fff;
+            }
+        }
+    }
+    @media(min-width:1024px) {
+        &:hover {
+            background-color: #fff;
+            .logo {
+                a {
+                    svg {
+                        g {
+                            fill: var(--accent);
+                        }
+                    }
+                }
+            }
+            .main-navigation {
+                ul.menu {
+                    li {
+                        a {
+                            color: var(--accent);
+                        }
+                    }
+                }
+            }
+            .header-populated {
+                .phone,
+                .search-icon,
+                .login,
+                .menu-toggle {
+                    a {
+                        color: var(--global-hover);
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:1024px) {
+        padding: 20px 0;
+    }
+}
